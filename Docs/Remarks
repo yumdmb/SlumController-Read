@@ -1,0 +1,119 @@
+
+@Members
+1. Sharran A/L Ganesen                      (22004887)      - Multimedia Computing 
+2. Eisraq Rejab bin Hassan                  (U2102340)      - Software Engineering
+3. Elvis Sawing anak Muran                  (U2101680/2)    - Software Engineering
+4. Muhammad Arif Fahmi bin Mohd Sharipuddin (U2101699/2)    - Multimedia Computing
+5. Muhammad Faisal Bin Hamzah               (U2101641)      - Computer System and Networking
+
+|------------------------------------------------------------------------------------------------|
+
+@Metrics to consider:
+
+1)Number of jobs created/ended within a give time range (recheck)
+2)Number of jobs by partitions * -bar graph
+3)Number of jobs causing error and the corresponding userb* 
+4)Average executation time of the jobs submitted to UMHPC 
+
+|------------------------------------------------------------------------------------------------|
+
+@Reports:
+
+1)Metrics
+2)Source code
+3)Output
+ - what we get
+ -Graph
+ -Table
+
+|------------------------------------------------------------------------------------------------|
+
+@Challenges and Issues
+
+Challenges :
+- We dont have the knowledge to use JavaFX : We learnt Java FX
+
+Issues:
+- The outcomes of the findings are not the same between the code(between members)
+- Didnt realised there's two ways job being created
+
+
+
+|------------------------------------------------------------------------------------------------|
+
+
+@FINAL@
+@Metrics to consider:
+
+1)Number of job errors by users //(A)
+    -Name : No. of errors
+    -Total errors : 143
+
+User                          Number of errors    
+----------------------------------------------------
+farhatabjani                  3                   
+yatyuen.lim                   1                   
+aah                           12                  
+lin0618                       4                   
+janvik                        4                   
+xinpeng                       1                   
+kurk                          1                   
+htt_felicia                   21                  
+hva170037                     5                   
+mk_98                         24                  
+han                           11                  
+fairus                        10                  
+f4ww4z                        4                   
+manoj                         4                   
+ongkuanhung                   1                   
+shahreeza                     6                   
+liew.wei.shiung               3                   
+hass                          1                   
+hongvin                       9                   
+chiuling                      2                   
+lobbeytan                     3                   
+fahmi8                        1                   
+aznul                         2                   
+tingweijing                   2                   
+noraini                       4                   
+roland                        4                   
+
+The number of jobs causing error : 143
+
+
+
+
+2)Number of job by partition for each month //(A)
+
+ex. for June 2022
+
+Number of Jobs by Partition in June 2022
++--------------------------------------------+
+|Partition                Total Jobs         |
++--------------------------------------------+
+|gpu-v100s                    224            |
+|cpu-opteron                  961            |
+|gpu-k10                      115            |
+|gpu-titan                    212            |
+|cpu-epyc                     612            |
+|gpu-k40c                      67            |
++--------------------------------------------+  
+...
+
+3)Number of Jobs by Partitions //Partition.jobByPartitions(fileName); (J)
+
+               GPU-V100s      GPU-K10        GPU-Titan      GPU-K40c       CPU-Opteron         CPU-EPYC       
+--------------------------------------------------------------------------------------------------------
+TOTAL          618            439            673            301            4920                3015           
+
+The highest number of partition : CPU-Opteron = 4920
+The lowest number of partition : GPU-K40c = 301
+
+---------------------
+//(A) total no. of jobs : 9966
+
+//(J) Number of job created : 8479
+      Number of job ended   : 9216
+-------------------
+
+4)

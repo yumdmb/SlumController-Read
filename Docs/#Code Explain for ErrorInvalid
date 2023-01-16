@@ -1,0 +1,4 @@
+#Code Explain for ErrorInvalid
+
+
+This code extracts the number of invalid and error records from a log file and prints them in a more visually appealing format. It reads the log file line by line, checks for lines containing the string "error:" and "Invalid", and keeps count of the number of invalid and error records. It also keeps track of the number of errors and invalid records for different types of entities such as job, partition, user, account, group, and node. It then prints the data in a formatted way along with the total number of errors and invalid records. It also prints the list of users who caused errors.

@@ -1,0 +1,23 @@
+$Code Explain for Monthjob
+
+This code reads a log file and counts the number of jobs created and ended by day for the months of June to December. The code reads the log file line by line, and for each line, it checks if the month in the log file matches the current month the code is processing, and if it matches, the code increments the count for the appropriate ArrayList based on the word found in the line 'done' or 'Allocate', indicating if the job is created or ended. At the end of processing each month, the code prints out the counts of jobs created and ended for each day of the month.
+
+
+
+Details:
+
+1)This code reads a log file with the given file name, and counts the number of jobs that were created and ended by day for the months of June to December.
+
+2)It creates two ArrayList, one for counting the number of jobs created and another for counting the number of jobs ended.
+
+3)The code then enters a for loop that iterates through each month from June to December and creates variables to keep track of the current month and the number of days in that month.
+
+4)It then initializes the values of the ArrayLists for number of jobs created and ended to 0 for each month.
+
+5)The code then uses a try-catch block to read the log file line by line, using a BufferedReader.
+
+6)For each line read, the code first uses the split method to split the line by spaces, and it uses the substring method to get the month and day from the first element of the split line.
+
+7)It then check if the month of the log file matches the current month being processed. If they match, the code uses a for loop to check if the line contains the word 'done' or 'Allocate' and increments the count for the appropriate ArrayList based on the word found.
+
+8)After processing all the lines for a month, the code then prints out the count of jobs created and ended for each day of the month using a for loop and the System.out.printf() method.

@@ -1,0 +1,34 @@
+#Code Explain for PartitionUsage
+
+//Brief
+This code reads a log file with the given file name, and counts the number of jobs that were allocated to different partitions in the log file. The partitions being considered are "gpu-v100s", "cpu-opteron", "gpu-k10", "gpu-titan", "cpu-epyc", and "gpu-k40c". The code reads the log file line by line, and for each line, it checks if the line is a valid line for counting a job allocation and if the month in the log file matches the current month the code is processing. If both conditions are true, the code increments the count for the appropriate partition. At the end of processing each month, the code prints out the counts for each partition for that month.
+
+
+
+1)The method getJobsByPartition(String fileName) takes in a single parameter, fileName, which is the name of the log file to be read.
+
+2)The code creates a Scanner object that reads from the file specified by the fileName parameter, and it creates several arrays and variables to keep track of the counts of jobs allocated to each partition, the current month being processed, and the total number of jobs processed.
+
+3)The code enters a while loop that reads the log file line by line, using the newScanner.hasNextLine() method to check if there are more lines to read.
+
+4)For each line read, the code first uses the split method to split the line by spaces, and it uses the seperate variable to split the first element of the split line by dashes to get the month in string format.
+
+5)The code then uses the digit variable to convert the month from string to integer using the Integer.parseInt() method.
+
+6)The code then checks if the length of the split line is 7 and the third element of the split line is "Allocate", indicating that the line is a valid line for counting a job allocation.
+
+7)If the line is a valid line, the code increments the total number of jobs processed.
+
+8)The code then checks if the month in the log file matches the current month being processed. If they match, the code uses a switch statement to increment the count for the appropriate partition based on the partition specified in the log file line.
+
+9)After processing all the lines for a month, the code then uses a switch statement to convert the month integer to the month name in string format.
+
+10)The code then calls the display(month) and print() methods to print out the month and a table header.
+
+11)The code then prints the counts for each partition for that month using a for loop and the System.out.printf() method.
+
+12)The code then resets the counts for each partition, the month being processed and increments the month.
+
+13)The code continues to read the log file and process the job allocation counts for each month until there are no more lines to read.
+
+14)Finally, at the end of processing all the lines, the code prints the total number of jobs processed.

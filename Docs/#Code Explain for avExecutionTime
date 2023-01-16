@@ -1,0 +1,5 @@
+#Code Explain for avExecutionTime.java
+
+This code calculates the average execution time for jobs in a log file. It does this by first reading the file and storing the time and ID for when a job is created and when it ends in separate ArrayLists. Then, it compares the ID of the created jobs with the ID of the ended jobs, and if they match, it calculates the execution time by subtracting the end time from the start time, and adding it to an ArrayList of execution times.
+
+It also calculates the total execution time, the maximum and minimum execution time, and the job ID for the job that took the longest and shortest time to execute.

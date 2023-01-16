@@ -1,0 +1,21 @@
+#Code Explain for Main file
+
+This code is the main class for an application that analyzes log data. It defines a main method that is executed when the application is run.
+
+1)The code declares and initializes several variables, including a fileName variable that contains the path to the log file to be analyzed, and a keyboard Scanner object that is used to read input from the user.
+
+2)The code enters an infinite do-while loop that displays a menu of options to the user and prompts them to enter a number corresponding to the option they want to select.
+
+3)The code uses a switch statement to determine which option the user has selected, and it calls the appropriate method to perform the desired analysis on the log file.
+
+4)The options are:
+
+	-Total number of completed and ended jobs by months
+	-Total number of job by partition
+	-Total number of errors by user
+	-Total number of jobs by partition for each month
+	-Total number of nodes usage per partition
+	-Execution Time
+	-The code also checks for -1 entered by user which is for exit. If -1 is entered, the code displays a message thanking the user and exits the application.
+
+5)The code also clears the console after each selection with the help of `new ProcessBuilder("cmd", "/c", "cls
