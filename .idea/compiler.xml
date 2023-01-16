@@ -8,8 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SlumController-Read" />
         <module name="assignment-fop" />
-        <module name="J-Log" />
-        <module name="J-Log2" />
       </profile>
     </annotationProcessing>
   </component>

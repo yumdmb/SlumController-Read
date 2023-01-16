@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException,InterruptedException {
-        String fileName = "./Files/extracted_log";
+    String fileName = "/home/yumdumb/Code/itsJava/SlumController-Read/Files/extracted_log";
         Scanner keyboard = new Scanner(System.in);
 
             do {
@@ -24,7 +24,7 @@ public class Main {
                 System.out.print("Select -> ");
                 int select = keyboard.nextInt();
                 System.out.println();
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                //new ProcessBuilder("sh", "-c", "clear").inheritIO().start().waitFor();
                 switch (select) {
                     case 1 -> MonthJob.totalMonthJobCreateEnd(fileName);
                     case 2 -> Partition.jobByPartitions(fileName);
