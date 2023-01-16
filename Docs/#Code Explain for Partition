@@ -1,3 +1,7 @@
 #Code Explain for Partition
 
-This code is reading a log file with the file name passed to the method "jobByPartitions" as an argument. It's counting the number of jobs that were scheduled on different partitions. The partitions it's counting are "cpu-epyc", "cpu-opteron", "gpu-v100s", "gpu-k40c", "gpu-titan" and "gpu-k10". After reading the log file, it's printing the total number of jobs scheduled on each partition. Then it's sorting the partitions based on the number of jobs scheduled on each partition and printing the partition with the highest and lowest number of scheduled jobs.
+This code is reading a log file with the file name passed to the method "jobByPartitions" as an argument.
+It's counting the number of jobs that were scheduled on different partitions.
+The partitions it's counting are "cpu-epyc", "cpu-opteron", "gpu-v100s", "gpu-k40c", "gpu-titan" and "gpu-k10".
+After reading the log file, it's printing the total number of jobs scheduled on each partition.
+Then it's sorting the partitions based on the number of jobs scheduled on each partition and printing the partition with the highest and lowest number of scheduled jobs.
