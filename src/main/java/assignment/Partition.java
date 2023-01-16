@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Partition {
 
-    //jobByPartitions
+    //jobByPartitionswi
     public static void jobByPartitions(String fileName){
         int num;
         String data;

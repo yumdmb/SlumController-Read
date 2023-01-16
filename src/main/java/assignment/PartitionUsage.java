@@ -248,7 +248,7 @@ public class PartitionUsage {
             }catch(IOException i)
             {System.out.println("Problem with input file");}
     }
-    
+
     public static void display(String a, String[]b, int[]c)         //create a method that used to print the result 
     {
         for(int i=0; i<b.length; i++)

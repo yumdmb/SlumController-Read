@@ -31,7 +31,7 @@ public class Main {
                     case 3 -> ErrorByUser.getErrorByUser(fileName);
                     case 4 -> PartitionUsage.getJobsByPartition(fileName); //by month(A)
                     case 5 -> PartitionUsage.getNodeUsagePerPartition(fileName);
-                    case 6 -> avExecutionTime.averageExecutionTime(fileName);
+                    case 6 -> ExecutionTime.averageExecutionTime(fileName);
                     case -1 -> {
                         System.out.println("Thank you!");
                         System.exit(0);
