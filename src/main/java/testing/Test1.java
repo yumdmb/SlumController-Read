@@ -7,7 +7,8 @@ import java.io.IOException;
 public class Test1 {
     public static void main(String[] args) throws IOException,InterruptedException {
         String fileName = "./Files/extracted_log";
-        //avExecutionTime.averageExecutionTime(fileName); //Average Execution Time
+        //avExecution
+        // ime.averageExecutionTime(fileName); //Average Execution Time
                     //Job by Partition
         //ErrorByUser.getErrorByUser(fileName);           //Number of Errors bu Users
         //MonthJob.totalMonthJobCreateEnd(fileName);
@@ -16,7 +17,8 @@ public class Test1 {
         //ErrorByUser.getErrorByUser(fileName);
         //PartitionUsage.getJobsByPartition(fileName); //by month(A)
         //PartitionUsage.getNodeUsagePerPartition(fileName);
-        MonthJob.totalCompletedAndEndedJob(fileName);
+        //MonthJob.totalCompletedAndEndedJob(fileName);
+        Invalid.InvalidJob(fileName);
     }
 
 }

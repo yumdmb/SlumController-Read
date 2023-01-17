@@ -117,3 +117,73 @@ The lowest number of partition : GPU-K40c = 301
 -------------------
 
 4)
+
+
+
+
+
+
+
+
+
+
+
+
+_________________________
+
+Deleted:
+
+- ExecutionTime.java
+
+
+        //Segment A
+
+       // import java.util.Collections;
+
+        Collections.sort(exeTime);
+        double median = 0;
+        double firstQuartile = 0;
+        double thirdQuartile = 0;
+
+        firstQuartile = exeTime.size()*0.25;
+        thirdQuartile = exeTime.size()*0.75;
+
+        System.out.printf("First Quartile of execution time : %.1f mins\n" , (exeTime.get((int)firstQuartile) + exeTime.get((int)firstQuartile+1))/2/1000/60);
+
+        if(exeTime.size()%2 == 0){
+            median =(exeTime.get((int) Math.floor(exeTime.size()/2))+  exeTime.get(((int)Math.floor(exeTime.size()/2)+1)) )/2;
+        }
+
+        else if(exeTime.size()%2==1){
+            median = exeTime.get((int) Math.ceil(exeTime.size()/2));
+        }
+        median = (median / 1000)/60;
+        System.out.printf("Median of execution time         : %.1f mins\n", median);
+
+        System.out.printf("Third Quartile of execution time : %.1f mins\n" , (exeTime.get((int)thirdQuartile) + exeTime.get((int)thirdQuartile+1))/2/1000/60);
+
+
+To print all JobID
+//        System.out.printf("\n%-8s%-20s%-20s%-30s%-30s%-30s\n","No.","Completed job ID","Ended job ID","job Completed Time","job Ended Time","Execution Time (mins)");
+//        System.out.print("--------------------------------------------------------------------------------------------------------------------------------------");
+
+        for(int i=0;i<createJobId.size();i++){
+
+            for(int j=0;j<endJobId.size();j++){
+                if(createJobId.get(i).equals(endJobId.get(j))){
+                    LocalDateTime createTime = Main.convertToLDT(createJobTime2[i]);
+                    LocalDateTime endTime = Main.convertToLDT(endJobTime2[j]);
+
+                    long milliBetween = ChronoUnit.MILLIS.between(createTime,endTime);
+
+                    if(milliBetween < 0)
+                        milliBetween *=-1;
+
+                    double milli = (double)milliBetween;
+
+                    exeTime.add(milli);
+
+                    double output = (double)((milliBetween/1000.0)/60);
+                    No++;
+//                    System.out.printf("\n%-8d%-20s%-20s%-30s%-30s",No,createJobId.get(i),endJobId.get(j),createJobTime2[i],endJobTime2[j]);
+//                    System.out.printf("%.3f",output);

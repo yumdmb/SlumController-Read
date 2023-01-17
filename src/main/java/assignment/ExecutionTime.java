@@ -7,14 +7,13 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class avExecutionTime {
+public class ExecutionTime {
 
-    static ArrayList createJobTime = new ArrayList();
-    static ArrayList createJobId = new ArrayList();
-    static ArrayList endJobTime = new ArrayList();
-    static ArrayList endJobId = new ArrayList();
+    static ArrayList<String> createJobTime = new ArrayList<>();
+    static ArrayList<String> createJobId = new ArrayList<>();
+    static ArrayList<String> endJobTime = new ArrayList<>();
+    static ArrayList<String> endJobId = new ArrayList<>();
     static ArrayList<Double> exeTime = new ArrayList<>();
 
     //averageExecutionTIme
@@ -53,7 +52,7 @@ public class avExecutionTime {
         }   // TRY
 
         catch(FileNotFoundException e){System.out.println("File Not Found");}
-        catch(IOException e){System.out.println("Error occurs while editing file");}
+        catch(IOException e){System.out.println("Error occurs");}
 
         String [] createJobTime2 = new String[createJobTime.size()];
         String [] endJobTime2 = new String[endJobTime.size()];
@@ -93,10 +92,10 @@ public class avExecutionTime {
 //                    System.out.printf("%.3f",output);
 
                     if((milliBetween/1000)>max){
-                        max = milliBetween/1000;maxJobId = (String) createJobId.get(i);}
+                        max = milliBetween/1000;maxJobId = createJobId.get(i);}
 
                     if((milliBetween)<min){
-                        min = milliBetween;minJobId = (String) createJobId.get(i);}
+                        min = milliBetween;minJobId = createJobId.get(i);}
 
                     totalExecutionTime += (double)((milliBetween/1000.0));
                     break;
@@ -135,29 +134,7 @@ public class avExecutionTime {
         System.out.printf("Lowest execution time : %.2f milliseconds\n" , min );
 
         System.out.println();
-
-        Collections.sort(exeTime);
-        double median = 0;
-        double firstQuartile = 0;
-        double thirdQuartile = 0;
-
-        firstQuartile = exeTime.size()*0.25;
-        thirdQuartile = exeTime.size()*0.75;
-
-        System.out.printf("First Quartile of execution time : %.1f mins\n" , (exeTime.get((int)firstQuartile) + exeTime.get((int)firstQuartile+1))/2/1000/60);
-
-        if(exeTime.size()%2 == 0){
-            median =(exeTime.get((int) Math.floor(exeTime.size()/2))+  exeTime.get(((int)Math.floor(exeTime.size()/2)+1)) )/2;
-        }
-
-        else if(exeTime.size()%2==1){
-            median = exeTime.get((int) Math.ceil(exeTime.size()/2));
-        }
-        median = (median / 1000)/60;
-        System.out.printf("Median of execution time         : %.1f mins\n", median);
-
-        System.out.printf("Third Quartile of execution time : %.1f mins\n" , (exeTime.get((int)thirdQuartile) + exeTime.get((int)thirdQuartile+1))/2/1000/60);
-
+        //Segment A
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
     } // End method
