@@ -1,0 +1,6 @@
+This code reads a file specified by the fileName parameter, then uses a BufferedReader to read the file line by line.
+It uses the split method to separate the lines into different parts, and then checks if the parts contain the word "Allocate".
+If they do, it splits the line again to check the partition and the node,
+and increments a counter for that specific partition and node in an array.
+It then repeats this process for each partition and node specified in the arrays partition, nodeCPU, and nodeGPU.
+It seems like this code is used to get the usage statistics of each node in each partition.

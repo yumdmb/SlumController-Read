@@ -14,4 +14,79 @@ The code also closes the BufferedReader after reading the file, and includes try
 
 //Briefly
 
-This code extracts the number of errors caused by each user from a log file, and prints them in a more visually appealing format. It reads the log file line by line, checks for lines containing the string "error: This association" (indicating an error), extracts the user ID from those lines, keeps count of the number of errors and the user ID, and then uses the Stream API to group the user IDs by their count, to find the number of errors caused by each user. Finally, it prints the data in a formatted way along with the total number of errors.
+This code extracts the number of errors caused by each user from a log file, and prints them in a more visually appealing format.
+It reads the log file line by line, checks for lines containing the string "error: This association" (indicating an error),
+extracts the user ID from those lines, keeps count of the number of errors and the user ID, and then uses the Stream API to group the user IDs by their count,
+to find the number of errors caused by each user. Finally, it prints the data in a formatted way along with the total number of errors.
+
+
+______________________________
+This Java code is a program that reads a file and searches for lines that contain the string "error: This association".
+When it finds a line that contains this string, it extracts the user ID from that line and increments a counter.
+After reading the entire file, it prints a table showing the number of errors caused by each user and the total number of errors caused.
+
+The program uses a try-catch block to handle any potential exceptions that may occur when reading the file,
+such as a file not being found or an IO error.
+
+It uses BufferedReader class to read the file and FileReader class to open the file.
+The BufferedReader reads the file line by line and the FileReader opens the file.
+
+The program uses the String class's contains() method to check if a line of text contains the search string "error: This association".
+The program uses the indexOf() method to find the starting and ending indices of the user ID within the line.
+It then uses the substring() method to extract the user ID from the line.
+
+Once the program has finished reading the file and extracting the user IDs,
+it uses the Arrays.stream() method to create a stream of the user IDs,
+and the Collectors.groupingBy() method to create a map that groups the user IDs by their value and counts the number of occurrences of each value.
+
+Finally, the program prints the table of the number of errors caused by each user,
+and the total number of errors caused and the map for duplicate count.
+
+
+
+-----------------------------------
+
+UserIDStart = line.indexOf("user=\'")+6;
+                    UserIDEnd= line.indexOf(", partition=")-1;
+
+         //What does this mean
+
+This code is used to extract the user ID from the line of text that contains the "error: This association" string.
+
+The first line of code, "UserIDStart = line.indexOf("user='")+6;",
+uses the indexOf() method to find the starting index of the string "user='" within the line of text.
+Once it has found the starting index, it adds 6 to the index to move to the first character of the user ID,
+since the user ID immediately follows the string "user='".
+
+The second line of code, "UserIDEnd= line.indexOf(", partition=")-1;", uses the indexOf() method again to find the ending index of the string ", partition=" within the line of text.
+ Once it has found the ending index, it subtracts 1 from the index to move to the last character of the user ID, since the user ID immediately precedes the string ", partition=".
+
+The substring() method is then used to extract the user ID from the line of text using the UserIDStart and UserIDEnd as the starting and ending indices.
+
+
+
+----------------------------------------
+
+String[]data= Error.split(" ");
+
+//get duplicate count using Map
+Map<String,Long> duplicateCount = Arrays.stream(data).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+//print Map for duplicate count
+duplicateCount.forEach((key,value)->System.out.printf("%-30s%-20s\n",key,value));
+
+//Explain
+This code is used to count the number of occurrences of each user ID in the "Error" string and print the results.
+
+The first line of code, "String[]data= Error.split(" ");",
+uses the split() method to split the "Error" string into an array of strings, using a space as the delimiter. This separates the individual user IDs that were extracted from the file and stored in the "Error" string.
+
+The next line of code uses the Arrays.stream() method to create a stream of the user IDs from the data array.
+
+The following line of code, "Map<String,Long> duplicateCount = Arrays.stream(data).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));",
+uses the Collectors.groupingBy() method to create a map where the keys are the user IDs and the values are the number of occurrences of each user ID in the data array.
+
+The next line of code, "duplicateCount.forEach((key,value)->System.out.printf("%-30s%-20s\n",key,value));"
+uses the forEach() method to iterate over the map, and the System.out.printf() method to print the user ID and the number of occurrences of each user ID in a tabular format.
+
+The above code snippet counts the number of occurrences of each user ID and the forEach() method is used to iterate over the map and print the results in tabular format.

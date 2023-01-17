@@ -4,4 +4,13 @@ This code is reading a log file with the file name passed to the method "jobByPa
 It's counting the number of jobs that were scheduled on different partitions.
 The partitions it's counting are "cpu-epyc", "cpu-opteron", "gpu-v100s", "gpu-k40c", "gpu-titan" and "gpu-k10".
 After reading the log file, it's printing the total number of jobs scheduled on each partition.
-Then it's sorting the partitions based on the number of jobs scheduled on each partition and printing the partition with the highest and lowest number of scheduled jobs.
+Then it's sorting the partitions based on the number of jobs scheduled on each partition and printing the partition
+with the highest and lowest number of scheduled jobs.
+
+
+--------------------------
+This Java code reads a file and counts the number of jobs that are allocated to different partitions.
+It uses a BufferedReader to read the file line by line and splits each line into an array of strings using the split() method.
+It then uses a series of if-statements to check for specific keywords that indicate a job is allocated to a specific partition,
+and increments a counter for that partition.
+It also sorted the partition with the highest number of jobs allocated to it and printed it out.

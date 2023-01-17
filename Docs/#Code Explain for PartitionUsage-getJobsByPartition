@@ -1,0 +1,10 @@
+This code reads in a file named "fileName" and processes it line by line using a Scanner object.
+It splits each line by space and separates the first element by "-",
+to get the month in String format and convert it to an integer.
+If the length of the split line is 7 and the 3rd element is "Allocate",
+it increments a total counter.
+It then checks if the month digit is equal to "b" and if it is,
+it splits the 6th element by "=" to get the partition and increments the corresponding partition count.
+If "b" is equal to 12, it sets the month to "December".
+If the digit is not equal to "b", it displays the month, the partition count, and increments "b" by 1.
+It then resets the partition count and starts counting for the next month.

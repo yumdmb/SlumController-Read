@@ -36,7 +36,7 @@ public class ErrorByUser {
         while((line=reader.readLine())!=null){
            
             
-            if(line.contains(search)){   //search for error data (Association)
+            if(line.contains(search)){   //search for error data (Association) //contains "error: This association
                 
                 
    
@@ -48,7 +48,8 @@ public class ErrorByUser {
                     counter++;
                     
                     //substring() method extracts characters, between two indices (positions), from a string, and returns the substring.
-                    
+
+                    //Print the errors
                     //System.out.println("");
                     //System.out.println(line);
                     //System.out.println("");
@@ -72,9 +73,9 @@ public class ErrorByUser {
             duplicateCount.forEach((key,value)->System.out.printf("%-30s%-20s\n",key,value));
         
             
-          
-           // System.out.println("");
-            // System.out.println(Error);
+          //all the errors
+            //System.out.println("");
+             //System.out.println(Error);
             
         System.out.println("");   
         System.out.println("The number of jobs causing error : "+ counter);
