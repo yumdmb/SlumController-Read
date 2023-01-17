@@ -17,7 +17,8 @@ public class Test1 {
         //ErrorByUser.getErrorByUser(fileName);
         //PartitionUsage.getJobsByPartition(fileName); //by month(A)
         //PartitionUsage.getNodeUsagePerPartition(fileName);
-        MonthJob.totalCompletedAndEndedJob(fileName);
+        //MonthJob.totalCompletedAndEndedJob(fileName);
+        Invalid.InvalidJob(fileName);
     }
 
 }
