@@ -49,18 +49,3 @@ public class Main {
         return LocalDateTime.parse(date, formatter);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

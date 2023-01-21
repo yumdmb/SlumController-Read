@@ -14,7 +14,7 @@ public class Job {
             int creat =0,june=0,july=0,ogos=0,sept=0,oct=0,nov=0,dec=0;
             int juneD=0,julyD=0,ogosD=0,septD=0,octD=0,novD=0,decD=0;
 
-            System.out.println("");
+            System.out.println();
 
             while(in.hasNext()){
                 String line =in.nextLine();
