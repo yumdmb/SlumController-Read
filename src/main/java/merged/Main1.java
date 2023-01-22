@@ -427,9 +427,6 @@ public class Main1 {
 
         int No = 0;
 
-//        System.out.printf("\n%-8s%-20s%-20s%-30s%-30s%-30s\n","No.","Completed job ID","Ended job ID","job Completed Time","job Ended Time","Execution Time (mins)");
-//        System.out.print("--------------------------------------------------------------------------------------------------------------------------------------");
-
         for(int i=0;i<createJobId.size();i++){
 
             for(int j=0;j<endJobId.size();j++){
@@ -448,8 +445,6 @@ public class Main1 {
 
                     double output = (double)((milliBetween/1000.0)/60);
                     No++;
-//                    System.out.printf("\n%-8d%-20s%-20s%-30s%-30s",No,createJobId.get(i),endJobId.get(j),createJobTime2[i],endJobTime2[j]);
-//                    System.out.printf("%.3f",output);
 
                     if((milliBetween/1000)>max){
                         max = milliBetween/1000;maxJobId = createJobId.get(i);}
