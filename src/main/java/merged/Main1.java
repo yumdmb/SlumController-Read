@@ -1,10 +1,10 @@
 package merged;
 
 import java.io.*;
+import java.util.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -233,7 +233,7 @@ public class Main1 {
                         numK10++;
                 }
 
-                for (String content1 : content) {
+                for (String content1 : content) {           //content1 as iterator
                     if (content1.equals("Partition=cpu-epyc")) {
                         numEPYC++;
                     }
